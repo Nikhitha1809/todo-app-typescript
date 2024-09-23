@@ -60,7 +60,7 @@ function TodosList({todos,setTodos, completedTodos, setCompletedTodos}:Props) {
     <Droppable droppableId='TodosRemove'>
       {(provided,snapshot)=>(
         <div className={`todos remove ${snapshot.isDraggingOver?"dragcomplete":""}`} ref={provided.innerRef} {...provided.droppableProps}>
-        <span className='todos__heading'>Completed Tasks</span>
+        <span className='todos__heading'>Completed Tasks </span>
             {completedTodos.map((todo,index)=>(
                 <SingleTodo todo={todo} index={index} key={todo.id} todos={completedTodos} setTodos={setCompletedTodos}/>
                 )
